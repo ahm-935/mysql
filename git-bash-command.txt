@@ -1,0 +1,373 @@
+
+B-5@DESKTOP-C2Q43D6 MINGW64 ~
+$ git config user.name
+NazmusSakib2025
+
+B-5@DESKTOP-C2Q43D6 MINGW64 ~
+$ git config user.email
+sakib.career2025@gmail.com
+
+B-5@DESKTOP-C2Q43D6 MINGW64 ~
+$ git config user.password
+
+B-5@DESKTOP-C2Q43D6 MINGW64 ~
+$ git config user.name "ahm-935"
+fatal: not in a git directory
+
+B-5@DESKTOP-C2Q43D6 MINGW64 ~
+$ cd /g/Arif-WDPF-70/xampp/htdocs
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /g/Arif-WDPF-70/xampp/htdocs
+$ cd -
+/c/Users/B-5
+
+B-5@DESKTOP-C2Q43D6 MINGW64 ~
+$ cd G:\Arif-WDPF-70\xampp\htdocs\class-75
+bash: cd: G:Arif-WDPF-70xampphtdocsclass-75: No such file or directory
+
+B-5@DESKTOP-C2Q43D6 MINGW64 ~
+$ cd /G/Arif-WDPF-70/xampp/htdocs/class-75
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs/class-75
+$ cd /G/Arif-WDPF-70/xampp/htdocs
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs
+$ git init
+Initialized empty Git repository in G:/Arif-WDPF-70/xampp/htdocs/.git/
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (master)
+$ git config --local user.name "ahm-935"
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (master)
+$ git config --local user.email "arifhushain935@gmail.com"
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (master)
+$ git config user.name
+ahm-935
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (master)
+$ git config user.email
+arifhushain935@gmail.com
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (master)
+$
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (master)
+$ git add .
+warning: in the working copy of 'class-70/students.csv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-70/test.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-71 home task, session, auth/class-71 home task, session, auth/home-task/files/student.csv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/composer.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/composer.lock', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/autoload.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/ClassLoader.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/InstalledVersions.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/LICENSE', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_classmap.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_namespaces.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_psr4.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_real.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_static.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/installed.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/installed.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/platform_check.php', LF will be replaced by CRLF the next time Git touches it
+warning: adding embedded git repository: class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/phpmailer/phpmailer
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/phpmailer/phpmailer
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/phpmailer/phpmailer
+hint:
+hint: See "git help submodule" for more information.
+hint: Disable this message with "git config set advice.addEmbeddedRepo false"
+warning: in the working copy of 'class-72/composer.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/composer.lock', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/autoload.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/ClassLoader.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/InstalledVersions.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/LICENSE', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/autoload_classmap.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/autoload_namespaces.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/autoload_psr4.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/autoload_real.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/autoload_static.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/installed.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/installed.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-72/vendor/composer/platform_check.php', LF will be replaced by CRLF the next time Git touches it
+warning: adding embedded git repository: class-72/vendor/phpmailer/phpmailer
+warning: in the working copy of 'class-74/composer.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/composer.lock', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/autoload.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/ClassLoader.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/InstalledVersions.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/LICENSE', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/autoload_classmap.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/autoload_namespaces.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/autoload_psr4.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/autoload_real.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/autoload_static.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/installed.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/installed.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'class-74/vendor/composer/platform_check.php', LF will be replaced by CRLF the next time Git touches it
+warning: adding embedded git repository: class-74/vendor/phpmailer/phpmailer
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (master)
+$ git commit -m "first upload"
+[master (root-commit) c422ad0] first upload
+ 184 files changed, 7384 insertions(+)
+ create mode 100644 _index.php
+ create mode 100644 class-58/basic.php
+ create mode 100644 class-58/datatype.php
+ create mode 100644 class-58/operator.php
+ create mode 100644 class-58/reference-variable.php
+ create mode 100644 class-58/super-global-var.php
+ create mode 100644 class-58/type-casting.php
+ create mode 100644 class-58/type-jugling.php
+ create mode 100644 class-59/control-structure.php
+ create mode 100644 class-59/excape-sequence.php
+ create mode 100644 class-59/file1.php
+ create mode 100644 class-59/file2.php
+ create mode 100644 class-59/heredoc-nowdoc.php
+ create mode 100644 class-59/include.php
+ create mode 100644 class-60/first-page.php
+ create mode 100644 class-60/func-return.php
+ create mode 100644 class-60/function.php
+ create mode 100644 class-60/loops.php
+ create mode 100644 class-60/second-page.php
+ create mode 100644 class-61/array-push-pop.php
+ create mode 100644 class-61/array-type.php
+ create mode 100644 class-61/array.php
+ create mode 100644 class-61/arrray-sort.php
+ create mode 100644 class-61/is-in-array.php
+ create mode 100644 class-61/list.php
+ create mode 100644 class-61/nat-sort.php
+ create mode 100644 class-61/user-defined-sort.php
+ create mode 100644 class-62/array-rev.php
+ create mode 100644 class-62/array-slice-splice.php
+ create mode 100644 class-62/array.php
+ create mode 100644 class-62/traversing.php
+ create mode 100644 class-63/child-class.php
+ create mode 100644 class-63/class.php
+ create mode 100644 class-63/form.php
+ create mode 100644 class-63/magic-function.php
+ create mode 100644 class-63/max.php
+ create mode 100644 class-63/submit.php
+ create mode 100644 class-64/child-class-m.php
+ create mode 100644 class-64/child-class.php
+ create mode 100644 class-64/class/academy.php
+ create mode 100644 class-64/class/scope.php
+ create mode 100644 class-64/class/trainee.php
+ create mode 100644 class-64/class/user-info.php
+ create mode 100644 class-64/voting-right.php
+ create mode 100644 class-65/abstruct-class.php
+ create mode 100644 class-65/assoc-array.php
+ create mode 100644 class-65/even-odd-num.php
+ create mode 100644 class-65/fact.php
+ create mode 100644 class-65/factorial.php
+ create mode 100644 class-65/getter-setter-class.php
+ create mode 100644 class-65/grade.php
+ create mode 100644 class-65/interface.php
+ create mode 100644 class-65/max-num.php
+ create mode 100644 class-65/trait.php
+ create mode 100644 class-66/email.php
+ create mode 100644 class-66/regex.php
+ create mode 100644 class-66/replace.php
+ create mode 100644 class-66/static-var.php
+ create mode 100644 class-66/string.php
+ create mode 100644 class-68/Arif'sHW-assoc-arr.php
+ create mode 100644 class-68/array-asoc.php
+ create mode 100644 class-68/checkbox.php
+ create mode 100644 class-68/image-validation.php
+ create mode 100644 class-68/largest-num.php
+ create mode 100644 class-68/prime-num.php
+ create mode 100644 class-68/uploads/iphone-16-20250812163001.jpg
+ create mode 100644 class-68/uploads/project_video.mp4
+ create mode 100644 class-68/uploads/scenic_view.mp4
+ create mode 100644 class-69 class search method, file validation.zip
+ create mode 100644 class-69 class search method, file validation/class-69 class search method, file validation/class/student.class.php
+ create mode 100644 class-69 class search method, file validation/class-69 class search method, file validation/image-upload.php
+ create mode 100644 class-69 class search method, file validation/class-69 class search method, file validation/search.php
+ create mode 100644 class-69 class search method, file validation/class-69 class search method, file validation/uploads/abc.pdf
+ create mode 100644 class-69 class search method, file validation/class-69 class search method, file validation/uploads/bug.jpeg
+ create mode 100644 class-69 class search method, file validation/class-69 class search method, file validation/uploads/myfile.png
+ create mode 100644 class-70/csv-file.php
+ create mode 100644 class-70/file-open.php
+ create mode 100644 class-70/files.php
+ create mode 100644 class-70/n.php
+ create mode 100644 class-70/students.csv
+ create mode 100644 class-70/test.txt
+ create mode 100644 class-70/uploads/1-1.png
+ create mode 100644 class-70/uploads/Bangladeshs-Number-1-Super-App-Pathao-348x224.jpg
+ create mode 100644 class-70/uploads/Birds_medium.mp4
+ create mode 100644 class-70/uploads/Forbes.png
+ create mode 100644 class-70/uploads/Pathao-Pay-Features.jpeg
+ create mode 100644 class-70/uploads/background-2114060_640.jpg
+ create mode 100644 class-70/uploads/east-india-company-27022026-01-1772190319.jpg
+ create mode 100644 class-70/uploads/ekushey-book-fair-270226-019-1772212646.jpg
+ create mode 100644 class-70/uploads/iphone-16-20250812163001.jpg
+ create mode 100644 class-70/uploads/scenic_view.mp4
+ create mode 100644 class-70/uploads/test.txt
+ create mode 100644 class-71 home task, session, auth.zip
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/authentication.php
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/home-task/create.php
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/home-task/files/student.class.php
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/home-task/files/student.csv
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/home-task/list.php
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/home-task/search.php
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/login-form.php
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/login.php
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/logout.php
+ create mode 100644 class-71 home task, session, auth/class-71 home task, session, auth/session.php
+ create mode 100644 class-72 php-mailer, composer setup.zip
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/composer.json
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/composer.lock
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/composer.zip
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/form-old-value.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/phpinfo.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/send-mail.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/autoload.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/ClassLoader.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/InstalledVersions.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/LICENSE
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_classmap.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_namespaces.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_psr4.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_real.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/autoload_static.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/installed.json
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/installed.php
+ create mode 100644 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/composer/platform_check.php
+ create mode 160000 class-72 php-mailer, composer setup/class-72 php-mailer, composer setup/vendor/phpmailer/phpmailer
+ create mode 100644 class-72/composer.json
+ create mode 100644 class-72/composer.lock
+ create mode 100644 class-72/image-file.php
+ create mode 100644 class-72/result.php
+ create mode 100644 class-72/send-mail.php
+ create mode 100644 class-72/uploads/2-1.png
+ create mode 100644 class-72/uploads/Download-Pathao-App.png
+ create mode 100644 class-72/uploads/blog-title.png
+ create mode 100644 class-72/uploads/food.png
+ create mode 100644 class-72/username.php
+ create mode 100644 class-72/vendor/autoload.php
+ create mode 100644 class-72/vendor/composer/ClassLoader.php
+ create mode 100644 class-72/vendor/composer/InstalledVersions.php
+ create mode 100644 class-72/vendor/composer/LICENSE
+ create mode 100644 class-72/vendor/composer/autoload_classmap.php
+ create mode 100644 class-72/vendor/composer/autoload_namespaces.php
+ create mode 100644 class-72/vendor/composer/autoload_psr4.php
+ create mode 100644 class-72/vendor/composer/autoload_real.php
+ create mode 100644 class-72/vendor/composer/autoload_static.php
+ create mode 100644 class-72/vendor/composer/installed.json
+ create mode 100644 class-72/vendor/composer/installed.php
+ create mode 100644 class-72/vendor/composer/platform_check.php
+ create mode 160000 class-72/vendor/phpmailer/phpmailer
+ create mode 100644 class-73/another-page.php
+ create mode 100644 class-73/dashboard.php
+ create mode 100644 class-73/error.log
+ create mode 100644 class-73/error.php
+ create mode 100644 class-73/login.php
+ create mode 100644 class-73/logout.php
+ create mode 100644 class-73/report.php
+ create mode 100644 class-73/session.php
+ create mode 100644 class-74/composer.json
+ create mode 100644 class-74/composer.lock
+ create mode 100644 class-74/email.php
+ create mode 100644 class-74/mail-send.php
+ create mode 100644 class-74/p.php
+ create mode 100644 class-74/vendor/autoload.php
+ create mode 100644 class-74/vendor/composer/ClassLoader.php
+ create mode 100644 class-74/vendor/composer/InstalledVersions.php
+ create mode 100644 class-74/vendor/composer/LICENSE
+ create mode 100644 class-74/vendor/composer/autoload_classmap.php
+ create mode 100644 class-74/vendor/composer/autoload_namespaces.php
+ create mode 100644 class-74/vendor/composer/autoload_psr4.php
+ create mode 100644 class-74/vendor/composer/autoload_real.php
+ create mode 100644 class-74/vendor/composer/autoload_static.php
+ create mode 100644 class-74/vendor/composer/installed.json
+ create mode 100644 class-74/vendor/composer/installed.php
+ create mode 100644 class-74/vendor/composer/platform_check.php
+ create mode 160000 class-74/vendor/phpmailer/phpmailer
+ create mode 100644 xm/class.php
+ create mode 100644 xm/cls.php
+ create mode 100644 xm/image-validation.php
+ create mode 100644 xm/largest-num.php
+ create mode 100644 xm/prime-num.php
+ create mode 100644 xm/uploads/Birds_medium.mp4
+ create mode 100644 xm/uploads/Image-01_A.jpg
+ create mode 100644 xm/uploads/download.png
+ create mode 100644 xm/uploads/img2.jpg
+ create mode 100644 xm/uploads/iphone-16-20250812163001.jpg
+ create mode 100644 xm/uploads/scenic_view.mp4
+ create mode 100644 xm/uploads/str replace.docx
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (master)
+$ git branch -M main
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git remote add origin https://github.com/ahm-935/class-75.git
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git push -u origin main
+remote: Permission to ahm-935/class-75.git denied to NazmusSakib2025.
+fatal: unable to access 'https://github.com/ahm-935/class-75.git/': The requested URL returned error: 403
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git config --global user.name "ahm-935"
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git config --global user.email "arifhushain935@gmail.com"
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git push -u origin main0
+error: src refspec main0 does not match any
+error: failed to push some refs to 'https://github.com/ahm-935/class-75.git'
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git push -u origin main
+remote: Permission to ahm-935/class-75.git denied to NazmusSakib2025.
+fatal: unable to access 'https://github.com/ahm-935/class-75.git/': The requested URL returned error: 403
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git push -u origin main
+remote: Permission to ahm-935/class-75.git denied to NazmusSakib2025.
+fatal: unable to access 'https://github.com/ahm-935/class-75.git/': The requested URL returned error: 403
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git push -u origin main
+Enumerating objects: 178, done.
+Counting objects: 100% (178/178), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (165/165), done.
+Writing objects: 100% (178/178), 119.16 MiB | 7.81 MiB/s, done.
+Total 178 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), done.
+remote: warning: See https://gh.io/lfs for more information.
+remote: warning: File class-72 php-mailer, composer setup.zip is 60.10 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/ahm-935/class-75.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$ git add .
+
+B-5@DESKTOP-C2Q43D6 MINGW64 /G/Arif-WDPF-70/xampp/htdocs (main)
+$
+

@@ -1,0 +1,148 @@
+create table if not exists users(
+id int unsigned primary key auto_increment,
+name varchar(100),
+email varchar(100) not null,
+password varchar(255)
+);
+
+create table if not exists results(
+id int unsigned primary key auto_increment,
+student_id int,
+score float default 0,
+exam_type varchar(100)
+);
+
+CRUD-  Create,  Read, Update, Delete
+
+insert into students (name, address, email, is_inactive) 
+values ("Mithu", "Rangpur", "truysjg@kj.hb", "0");
+insert into students (name, address, email, is_inactive) 
+values ("Rani", "Mirpur", "lkjsfajg@kj.hb", "1");
+insert into students (name, address, email, is_inactive) 
+values ("Mina", "Lalbag", "asjg@kj.hb", "0");
+insert into students (name, address, email, is_inactive) 
+values ("Raju", "Shahbag", "lkjsdajg@kj.hb", "1");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CRUD-  Create,  Read, Update, Delete
+
+insert into students(name, email, is_inactive)
+values("Mithu", "mail@example.com", 0);
+
+insert into students(name, email, is_inactive) 
+values("Eimrul", "eimrul@mail.info", 0);
+
+update students 
+set name="Munna", email="munna@mail.info"
+where id=6;
+
+
+update students 
+set address="Ranisankail", is_inactive=1
+where id=6;
+
+insert into students(name, email, is_inactive) 
+values("Tasnim", "tasnim@mail.info", 0);
+
+delete row:
+delete from students where id=3;
+
+alter table students 
+add column phone varchar(20) 
+after email;
+
+update students 
+set phone="+880134567890", email="raju@xmple.com", address="Rajshahi"
+where id=6;
+
+Update 
+ALTER TABLE students 
+CHANGE name full_name VARCHAR(20);
+
+
+ALTER TABLE students 
+DROP COLUMN phone;
+
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| student_id | int(11)          | YES  |     | NULL    |                |
+| score      | float            | YES  |     | 0       |                |
+| exam_type  | varchar(100)     | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+
+create table if not exists results(
+id int unsigned primary key auto_increment,
+student_id int(11),
+score float,
+exam_type varchar(100)
+);
+
+
+insert into results(student_id, score, exam_type) 
+values(1, 88, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(2, 20, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(5, 39, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(7, 59, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(8, 93, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(1, 88, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(2, 20, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(5, 39, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(7, 59, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(1, 90, "Final");
+
+
+select r.student_id, s.full_name, r.score, r.exam_type 
+from students as s, results r
+where r.student_id=s.id;
+
+select r.student_id, s.full_name, r.score as marks, r.exam_type
+from students as s, results r
+where r.student_id=s.id and r.exam_type="Final";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

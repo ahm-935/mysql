@@ -1,0 +1,15 @@
+create table students1
+(
+id int(5) unsigned primary key auto_increment,
+name varchar(100) not null,
+email varchar(50) unique,
+address varchar(255),
+is_inactive tinyint default 0
+);
+
+# column_name datatype attributes(optional)
+
+create database/table (name);
+drop database/table (name);
+
+show databases/tables; 
