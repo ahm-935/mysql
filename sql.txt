@@ -1,0 +1,898 @@
+CRUD-  Create,  Read, Update, Delete
+
+insert into students(name, email, is_inactive)
+values("Mithu", "mail@example.com", 0);
+
+insert into students(name, email, is_inactive) 
+values("Eimrul", "eimrul@mail.info", 0);
+
+update students 
+set name="Munna", email="munna@mail.info"
+where id=6;
+
+
+update students 
+set address="Ranisankail", is_inactive=1
+where id=6;
+
+insert into students(name, email, is_inactive) 
+values("Tasnim", "tasnim@mail.info", 0);
+
+delete row:
+delete from students where id=3;
+
+alter table students 
+add column phone varchar(20) 
+after email;
+
+update students 
+set phone="+880134567890", email="raju@xmple.com", address="Rajshahi"
+where id=6;
+
+Update 
+ALTER TABLE students 
+CHANGE name full_name VARCHAR(20);
+
+
+ALTER TABLE students 
+DROP COLUMN phone;
+
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| student_id | int(11)          | YES  |     | NULL    |                |
+| score      | float            | YES  |     | 0       |                |
+| exam_type  | varchar(100)     | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+
+create table if not exists results(
+id int unsigned primary key auto_increment,
+student_id int(11),
+score float,
+exam_type varchar(100)
+);
+
+
+insert into results(student_id, score, exam_type) 
+values(1, 88, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(2, 20, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(5, 39, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(7, 59, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(8, 93, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(1, 88, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(2, 20, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(5, 39, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(7, 59, "Monthly");
+insert into results(student_id, score, exam_type) 
+values(1, 90, "Final");
+
+
+select r.student_id, s.full_name, r.score, r.exam_type 
+from students as s, results r
+where r.student_id=s.id;
+
+select r.student_id, s.full_name, r.score as marks, r.exam_type
+from students as s, results r
+where r.student_id=s.id and r.exam_type="Final";
+
+
+
+ALTER TABLE results
+CHANGE 88 50 float where id=1;
+
+
+update results
+set score=50, exam_type="Final26"
+where id=1;
+
+
+view
+create view view_student_results as
+select r.student_id, s.full_name, r.score as marks, r.exam_type
+from students as s, results r
+where r.student_id=s.id;
+
+
+
+insert into results(student_id, score, exam_type)
+values(2, 20, "Mid-1");
+insert into results(student_id, score, exam_type)
+values(5, 39, "Mid-1");
+insert into results(student_id, score, exam_type)
+values(7, 28, "Mid-1");
+insert into results(student_id, score, exam_type)
+values(8, 93, "Mid-1");
+insert into results(student_id, score, exam_type)
+values(1, 33, "Mid-1");
+insert into results(student_id, score, exam_type)
+values(2, 20, "Mid-2");
+insert into results(student_id, score, exam_type)
+values(5, 39, "Mid-2");
+insert into results(student_id, score, exam_type)
+values(7, 59, "Mid-2");
+insert into results(student_id, score, exam_type)
+values(7, 65, "Final");
+
+
+
+
+
+
+class-78 mysql cmd
+Microsoft Windows [Version 10.0.26200.8457]
+(c) Microsoft Corporation. All rights reserved.
+
+G:\Arif-WDPF-70\xampp\mysql\bin>show databases;
+'show' is not recognized as an internal or external command,
+operable program or batch file.
+
+G:\Arif-WDPF-70\xampp\mysql\bin> -u root
+'-u' is not recognized as an internal or external command,
+operable program or batch file.
+
+G:\Arif-WDPF-70\xampp\mysql\bin> mysql -u root
+ERROR 2002 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+
+G:\Arif-WDPF-70\xampp\mysql\bin> mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| ahms_db            |
+| information_schema |
+| mydata             |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+7 rows in set (0.050 sec)
+
+MariaDB [(none)]> use ahms_db;
+Database changed
+MariaDB [ahms_db]> show tables;
++-------------------+
+| Tables_in_ahms_db |
++-------------------+
+| results           |
+| students          |
+| users             |
++-------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [ahms_db]> desc users
+    -> ;
++----------+------------------+------+-----+---------+----------------+
+| Field    | Type             | Null | Key | Default | Extra          |
++----------+------------------+------+-----+---------+----------------+
+| id       | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(100)     | YES  |     | NULL    |                |
+| email    | varchar(100)     | NO   |     | NULL    |                |
+| password | varchar(255)     | YES  |     | NULL    |                |
++----------+------------------+------+-----+---------+----------------+
+4 rows in set (0.040 sec)
+
+MariaDB [ahms_db]> desc results;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| student_id | int(11)          | YES  |     | NULL    |                |
+| score      | float            | YES  |     | 0       |                |
+| exam_type  | varchar(100)     | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.043 sec)
+
+MariaDB [ahms_db]> desc students;
++-------------+-----------------+------+-----+---------+----------------+
+| Field       | Type            | Null | Key | Default | Extra          |
++-------------+-----------------+------+-----+---------+----------------+
+| id          | int(5) unsigned | NO   | PRI | NULL    | auto_increment |
+| name        | varchar(100)    | NO   |     | NULL    |                |
+| email       | varchar(50)     | YES  | UNI | NULL    |                |
+| address     | varchar(255)    | YES  |     | NULL    |                |
+| is_inactive | tinyint(4)      | YES  |     | 0       |                |
++-------------+-----------------+------+-----+---------+----------------+
+5 rows in set (0.011 sec)
+
+MariaDB [ahms_db]> select * students;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'students' at line 1
+MariaDB [ahms_db]> select * from students;
++----+-------+----------------+---------+-------------+
+| id | name  | email          | address | is_inactive |
++----+-------+----------------+---------+-------------+
+|  1 | Mina  | asjg@kj.hb     | Lalbag  |           0 |
+|  2 | Mithu | truysjg@kj.hb  | Rangpur |           0 |
+|  3 | Rani  | lkjsfajg@kj.hb | Mirpur  |           1 |
+|  5 | Raju  | lkjsdajg@kj.hb | Shahbag |           1 |
++----+-------+----------------+---------+-------------+
+4 rows in set (0.043 sec)
+
+MariaDB [ahms_db]> insert into students(name, email, is_inactive)
+    -> values("Mithu", "mail@example.com", 0);
+Query OK, 1 row affected (0.622 sec)
+
+MariaDB [ahms_db]> select * from students;
++----+-------+------------------+---------+-------------+
+| id | name  | email            | address | is_inactive |
++----+-------+------------------+---------+-------------+
+|  1 | Mina  | asjg@kj.hb       | Lalbag  |           0 |
+|  2 | Mithu | truysjg@kj.hb    | Rangpur |           0 |
+|  3 | Rani  | lkjsfajg@kj.hb   | Mirpur  |           1 |
+|  5 | Raju  | lkjsdajg@kj.hb   | Shahbag |           1 |
+|  6 | Mithu | mail@example.com | NULL    |           0 |
++----+-------+------------------+---------+-------------+
+5 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> insert into students(name, email, is_inactive) values("Eimrul", "eimrul@mail.info" 0);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0)' at line 1
+MariaDB [ahms_db]> insert into students(name, email, is_inactive)
+    -> values("Eimrul", "eimrul@mail.info", 0);
+Query OK, 1 row affected (0.061 sec)
+
+MariaDB [ahms_db]> select * from students;
++----+--------+------------------+---------+-------------+
+| id | name   | email            | address | is_inactive |
++----+--------+------------------+---------+-------------+
+|  1 | Mina   | asjg@kj.hb       | Lalbag  |           0 |
+|  2 | Mithu  | truysjg@kj.hb    | Rangpur |           0 |
+|  3 | Rani   | lkjsfajg@kj.hb   | Mirpur  |           1 |
+|  5 | Raju   | lkjsdajg@kj.hb   | Shahbag |           1 |
+|  6 | Mithu  | mail@example.com | NULL    |           0 |
+|  7 | Eimrul | eimrul@mail.info | NULL    |           0 |
++----+--------+------------------+---------+-------------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select id,name from students;
++----+--------+
+| id | name   |
++----+--------+
+|  1 | Mina   |
+|  2 | Mithu  |
+|  3 | Rani   |
+|  5 | Raju   |
+|  6 | Mithu  |
+|  7 | Eimrul |
++----+--------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select email from students;
++------------------+
+| email            |
++------------------+
+| asjg@kj.hb       |
+| eimrul@mail.info |
+| lkjsdajg@kj.hb   |
+| lkjsfajg@kj.hb   |
+| mail@example.com |
+| truysjg@kj.hb    |
++------------------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select is_inactive from students;
++-------------+
+| is_inactive |
++-------------+
+|           0 |
+|           0 |
+|           1 |
+|           1 |
+|           0 |
+|           0 |
++-------------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select id,name from students where is_inactive=1;
++----+------+
+| id | name |
++----+------+
+|  3 | Rani |
+|  5 | Raju |
++----+------+
+2 rows in set (0.001 sec)
+
+MariaDB [ahms_db]> select id,name from students where is_inactive=0;
++----+--------+
+| id | name   |
++----+--------+
+|  1 | Mina   |
+|  2 | Mithu  |
+|  6 | Mithu  |
+|  7 | Eimrul |
++----+--------+
+4 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select id,name from students where address=null;
+Empty set (0.000 sec)
+
+MariaDB [ahms_db]> select id,name from students where address=NULL;
+Empty set (0.000 sec)
+
+MariaDB [ahms_db]> select id,name from students where address is NULL;
++----+--------+
+| id | name   |
++----+--------+
+|  6 | Mithu  |
+|  7 | Eimrul |
++----+--------+
+2 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select id,name from students order by name desc;
++----+--------+
+| id | name   |
++----+--------+
+|  3 | Rani   |
+|  5 | Raju   |
+|  2 | Mithu  |
+|  6 | Mithu  |
+|  1 | Mina   |
+|  7 | Eimrul |
++----+--------+
+6 rows in set (0.001 sec)
+
+MariaDB [ahms_db]> select id,name from students order by name;
++----+--------+
+| id | name   |
++----+--------+
+|  7 | Eimrul |
+|  1 | Mina   |
+|  2 | Mithu  |
+|  6 | Mithu  |
+|  5 | Raju   |
+|  3 | Rani   |
++----+--------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select id,name from students order by id;
++----+--------+
+| id | name   |
++----+--------+
+|  1 | Mina   |
+|  2 | Mithu  |
+|  3 | Rani   |
+|  5 | Raju   |
+|  6 | Mithu  |
+|  7 | Eimrul |
++----+--------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select * from students order by id where
+    -> is_inactive=0 address is null;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where
+is_inactive=0 address is null' at line 1
+MariaDB [ahms_db]> update students
+    -> set name="Munna", email="munna@mail.info"
+    -> where id=6;
+Query OK, 1 row affected (0.046 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [ahms_db]> select * from students;
++----+--------+------------------+---------+-------------+
+| id | name   | email            | address | is_inactive |
++----+--------+------------------+---------+-------------+
+|  1 | Mina   | asjg@kj.hb       | Lalbag  |           0 |
+|  2 | Mithu  | truysjg@kj.hb    | Rangpur |           0 |
+|  3 | Rani   | lkjsfajg@kj.hb   | Mirpur  |           1 |
+|  5 | Raju   | lkjsdajg@kj.hb   | Shahbag |           1 |
+|  6 | Munna  | munna@mail.info  | NULL    |           0 |
+|  7 | Eimrul | eimrul@mail.info | NULL    |           0 |
++----+--------+------------------+---------+-------------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> update students
+    -> set address="Ranisankail", is_inactive=1
+    -> where id=6;
+Query OK, 1 row affected (0.438 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [ahms_db]> select * from students;
++----+--------+------------------+-------------+-------------+
+| id | name   | email            | address     | is_inactive |
++----+--------+------------------+-------------+-------------+
+|  1 | Mina   | asjg@kj.hb       | Lalbag      |           0 |
+|  2 | Mithu  | truysjg@kj.hb    | Rangpur     |           0 |
+|  3 | Rani   | lkjsfajg@kj.hb   | Mirpur      |           1 |
+|  5 | Raju   | lkjsdajg@kj.hb   | Shahbag     |           1 |
+|  6 | Munna  | munna@mail.info  | Ranisankail |           1 |
+|  7 | Eimrul | eimrul@mail.info | NULL        |           0 |
++----+--------+------------------+-------------+-------------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> insert into students(name, email, is_inactive)
+    -> values("Tasnim", "tasnim@mail.info", 0);
+Query OK, 1 row affected (0.656 sec)
+
+MariaDB [ahms_db]> select * from students;
++----+--------+------------------+-------------+-------------+
+| id | name   | email            | address     | is_inactive |
++----+--------+------------------+-------------+-------------+
+|  1 | Mina   | asjg@kj.hb       | Lalbag      |           0 |
+|  2 | Mithu  | truysjg@kj.hb    | Rangpur     |           0 |
+|  3 | Rani   | lkjsfajg@kj.hb   | Mirpur      |           1 |
+|  5 | Raju   | lkjsdajg@kj.hb   | Shahbag     |           1 |
+|  6 | Munna  | munna@mail.info  | Ranisankail |           1 |
+|  7 | Eimrul | eimrul@mail.info | NULL        |           0 |
+|  8 | Tasnim | tasnim@mail.info | NULL        |           0 |
++----+--------+------------------+-------------+-------------+
+7 rows in set (0.000 sec)
+
+MariaDB [ahms_db]>
+MariaDB [ahms_db]> delete from students where id=3;
+Query OK, 1 row affected (0.053 sec)
+
+MariaDB [ahms_db]> select * from students;
++----+--------+------------------+-------------+-------------+
+| id | name   | email            | address     | is_inactive |
++----+--------+------------------+-------------+-------------+
+|  1 | Mina   | asjg@kj.hb       | Lalbag      |           0 |
+|  2 | Mithu  | truysjg@kj.hb    | Rangpur     |           0 |
+|  5 | Raju   | lkjsdajg@kj.hb   | Shahbag     |           1 |
+|  6 | Munna  | munna@mail.info  | Ranisankail |           1 |
+|  7 | Eimrul | eimrul@mail.info | NULL        |           0 |
+|  8 | Tasnim | tasnim@mail.info | NULL        |           0 |
++----+--------+------------------+-------------+-------------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]>
+MariaDB [ahms_db]> delete from students where id=3;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [ahms_db]> alter table students
+    -> add column phone varchar(20)
+    -> after email;
+Query OK, 0 rows affected (0.624 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [ahms_db]> select * from students;
++----+--------+------------------+-------+-------------+-------------+
+| id | name   | email            | phone | address     | is_inactive |
++----+--------+------------------+-------+-------------+-------------+
+|  1 | Mina   | asjg@kj.hb       | NULL  | Lalbag      |           0 |
+|  2 | Mithu  | truysjg@kj.hb    | NULL  | Rangpur     |           0 |
+|  5 | Raju   | lkjsdajg@kj.hb   | NULL  | Shahbag     |           1 |
+|  6 | Munna  | munna@mail.info  | NULL  | Ranisankail |           1 |
+|  7 | Eimrul | eimrul@mail.info | NULL  | NULL        |           0 |
+|  8 | Tasnim | tasnim@mail.info | NULL  | NULL        |           0 |
++----+--------+------------------+-------+-------------+-------------+
+6 rows in set (0.001 sec)
+
+MariaDB [ahms_db]> update students
+    -> set phone="+880134567890", email="raju@xmple.com" address="Rajshahi"
+    -> where id=6;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'address="Rajshahi"
+where id=6' at line 2
+MariaDB [ahms_db]> update students
+    -> set phone="+880134567890", email="raju@xmple.com" address="Rajshahi"
+    -> where id=5;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'address="Rajshahi"
+where id=5' at line 2
+MariaDB [ahms_db]>
+MariaDB [ahms_db]> update students
+    -> set phone="+880134567890", email="raju@xmple.com", address="Rajshahi"
+    -> where id=6;
+Query OK, 1 row affected (0.430 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [ahms_db]> select * from students;
++----+--------+------------------+---------------+----------+-------------+
+| id | name   | email            | phone         | address  | is_inactive |
++----+--------+------------------+---------------+----------+-------------+
+|  1 | Mina   | asjg@kj.hb       | NULL          | Lalbag   |           0 |
+|  2 | Mithu  | truysjg@kj.hb    | NULL          | Rangpur  |           0 |
+|  5 | Raju   | lkjsdajg@kj.hb   | NULL          | Shahbag  |           1 |
+|  6 | Munna  | raju@xmple.com   | +880134567890 | Rajshahi |           1 |
+|  7 | Eimrul | eimrul@mail.info | NULL          | NULL     |           0 |
+|  8 | Tasnim | tasnim@mail.info | NULL          | NULL     |           0 |
++----+--------+------------------+---------------+----------+-------------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> use results;
+ERROR 1049 (42000): Unknown database 'results'
+MariaDB [ahms_db]> desc results;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| student_id | int(11)          | YES  |     | NULL    |                |
+| score      | float            | YES  |     | 0       |                |
+| exam_type  | varchar(100)     | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.010 sec)
+
+MariaDB [ahms_db]> select * from results;
+Empty set (0.000 sec)
+
+MariaDB [ahms_db]> ALTER TABLE students
+    -> CHANGE name full_name VARCHAR(20);
+Query OK, 6 rows affected (1.003 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+MariaDB [ahms_db]> desc students;
++-------------+-----------------+------+-----+---------+----------------+
+| Field       | Type            | Null | Key | Default | Extra          |
++-------------+-----------------+------+-----+---------+----------------+
+| id          | int(5) unsigned | NO   | PRI | NULL    | auto_increment |
+| full_name   | varchar(20)     | YES  |     | NULL    |                |
+| email       | varchar(50)     | YES  | UNI | NULL    |                |
+| phone       | varchar(20)     | YES  |     | NULL    |                |
+| address     | varchar(255)    | YES  |     | NULL    |                |
+| is_inactive | tinyint(4)      | YES  |     | 0       |                |
++-------------+-----------------+------+-----+---------+----------------+
+6 rows in set (0.008 sec)
+
+MariaDB [ahms_db]> select * from students;
++----+-----------+------------------+---------------+----------+-------------+
+| id | full_name | email            | phone         | address  | is_inactive |
++----+-----------+------------------+---------------+----------+-------------+
+|  1 | Mina      | asjg@kj.hb       | NULL          | Lalbag   |           0 |
+|  2 | Mithu     | truysjg@kj.hb    | NULL          | Rangpur  |           0 |
+|  5 | Raju      | lkjsdajg@kj.hb   | NULL          | Shahbag  |           1 |
+|  6 | Munna     | raju@xmple.com   | +880134567890 | Rajshahi |           1 |
+|  7 | Eimrul    | eimrul@mail.info | NULL          | NULL     |           0 |
+|  8 | Tasnim    | tasnim@mail.info | NULL          | NULL     |           0 |
++----+-----------+------------------+---------------+----------+-------------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]>
+MariaDB [ahms_db]> ALTER TABLE students
+    -> DROP COLUMN phone;
+Query OK, 0 rows affected (0.145 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [ahms_db]> select * from students;
++----+-----------+------------------+----------+-------------+
+| id | full_name | email            | address  | is_inactive |
++----+-----------+------------------+----------+-------------+
+|  1 | Mina      | asjg@kj.hb       | Lalbag   |           0 |
+|  2 | Mithu     | truysjg@kj.hb    | Rangpur  |           0 |
+|  5 | Raju      | lkjsdajg@kj.hb   | Shahbag  |           1 |
+|  6 | Munna     | raju@xmple.com   | Rajshahi |           1 |
+|  7 | Eimrul    | eimrul@mail.info | NULL     |           0 |
+|  8 | Tasnim    | tasnim@mail.info | NULL     |           0 |
++----+-----------+------------------+----------+-------------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> drop table results;
+Query OK, 0 rows affected (0.508 sec)
+
+MariaDB [ahms_db]> create table if not exists results(
+    -> id int unsigned primary key auto_increment,
+    -> student_id int(11),
+    -> score float,
+    -> exam_type varchar(100)
+    -> );
+Query OK, 0 rows affected (0.131 sec)
+
+MariaDB [ahms_db]> show tables;
++-------------------+
+| Tables_in_ahms_db |
++-------------------+
+| results           |
+| students          |
+| users             |
++-------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [ahms_db]> desc results;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| student_id | int(11)          | YES  |     | NULL    |                |
+| score      | float            | YES  |     | NULL    |                |
+| exam_type  | varchar(100)     | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.010 sec)
+
+MariaDB [ahms_db]> insert into students(student_id, score, exam_type)
+    -> values(100134, 88, Monthly);
+ERROR 1054 (42S22): Unknown column 'Monthly' in 'field list'
+MariaDB [ahms_db]> insert into students(student_id, score, exam_type)
+    -> values(100134, 88, "Monthly");
+ERROR 1054 (42S22): Unknown column 'student_id' in 'field list'
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(1, 88, "Monthly");
+Query OK, 1 row affected (0.632 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(2, 20, "Monthly");
+Query OK, 1 row affected (0.041 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(5, 39, "Monthly");
+Query OK, 1 row affected (0.049 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(7, 59, "Monthly");
+Query OK, 1 row affected (0.049 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(8, 93, "Monthly");
+Query OK, 1 row affected (0.019 sec)
+
+MariaDB [ahms_db]> select * from results;
++----+------------+-------+-----------+
+| id | student_id | score | exam_type |
++----+------------+-------+-----------+
+|  1 |          1 |    88 | Monthly   |
+|  2 |          2 |    20 | Monthly   |
+|  3 |          5 |    39 | Monthly   |
+|  4 |          7 |    59 | Monthly   |
+|  5 |          8 |    93 | Monthly   |
++----+------------+-------+-----------+
+5 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(1, 90, "Final");
+Query OK, 1 row affected (0.063 sec)
+
+MariaDB [ahms_db]> select * from results;
++----+------------+-------+-----------+
+| id | student_id | score | exam_type |
++----+------------+-------+-----------+
+|  1 |          1 |    88 | Monthly   |
+|  2 |          2 |    20 | Monthly   |
+|  3 |          5 |    39 | Monthly   |
+|  4 |          7 |    59 | Monthly   |
+|  5 |          8 |    93 | Monthly   |
+|  6 |          1 |    90 | Final     |
++----+------------+-------+-----------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select s.student_id, s.full_name, r.score, r.exam_type
+    -> from students as r, results r
+    -> where r.student_id=s.id;
+ERROR 1066 (42000): Not unique table/alias: 'r'
+MariaDB [ahms_db]> select s.student_id, s.full_name, r.score, r.exam_type
+    -> from students as s, results r
+    -> where r.student_id=s.id;
+ERROR 1054 (42S22): Unknown column 's.student_id' in 'field list'
+MariaDB [ahms_db]> select r.student_id, s.full_name, r.score, r.exam_type
+    -> from students as s, results r
+    -> where r.student_id=s.id;
++------------+-----------+-------+-----------+
+| student_id | full_name | score | exam_type |
++------------+-----------+-------+-----------+
+|          1 | Mina      |    88 | Monthly   |
+|          2 | Mithu     |    20 | Monthly   |
+|          5 | Raju      |    39 | Monthly   |
+|          7 | Eimrul    |    59 | Monthly   |
+|          8 | Tasnim    |    93 | Monthly   |
+|          1 | Mina      |    90 | Final     |
++------------+-----------+-------+-----------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select r.student_id, s.full_name, r.score as marks, r.exam_type
+    -> from students as s, results r
+    -> where r.student_id=s.id;
++------------+-----------+-------+-----------+
+| student_id | full_name | marks | exam_type |
++------------+-----------+-------+-----------+
+|          1 | Mina      |    88 | Monthly   |
+|          2 | Mithu     |    20 | Monthly   |
+|          5 | Raju      |    39 | Monthly   |
+|          7 | Eimrul    |    59 | Monthly   |
+|          8 | Tasnim    |    93 | Monthly   |
+|          1 | Mina      |    90 | Final     |
++------------+-----------+-------+-----------+
+6 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(5, 70, "Final");
+Query OK, 1 row affected (0.635 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(8, 79, "Final");
+Query OK, 1 row affected (0.055 sec)
+
+MariaDB [ahms_db]> select r.student_id, s.full_name, r.score as marks, r.exam_type
+    -> from students as s, results r
+    -> where r.student_id=s.id and r.exam_type="Final";
++------------+-----------+-------+-----------+
+| student_id | full_name | marks | exam_type |
++------------+-----------+-------+-----------+
+|          1 | Mina      |    90 | Final     |
+|          5 | Raju      |    70 | Final     |
+|          8 | Tasnim    |    79 | Final     |
++------------+-----------+-------+-----------+
+3 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select * from results;
++----+------------+-------+-----------+
+| id | student_id | score | exam_type |
++----+------------+-------+-----------+
+|  1 |          1 |    88 | Monthly   |
+|  2 |          2 |    20 | Monthly   |
+|  3 |          5 |    39 | Monthly   |
+|  4 |          7 |    59 | Monthly   |
+|  5 |          8 |    93 | Monthly   |
+|  6 |          1 |    90 | Final     |
+|  7 |          5 |    70 | Final     |
+|  8 |          8 |    79 | Final     |
++----+------------+-------+-----------+
+8 rows in set (0.001 sec)
+
+MariaDB [ahms_db]> ALTER TABLE results
+    -> CHANGE 88 50 float where id=1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '88 50 float where id=1' at line 2
+MariaDB [ahms_db]> update results
+    -> set score=50, exam_type="Final26"
+    -> where id=1;
+Query OK, 1 row affected (0.533 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [ahms_db]> select * from results;
++----+------------+-------+-----------+
+| id | student_id | score | exam_type |
++----+------------+-------+-----------+
+|  1 |          1 |    50 | Final26   |
+|  2 |          2 |    20 | Monthly   |
+|  3 |          5 |    39 | Monthly   |
+|  4 |          7 |    59 | Monthly   |
+|  5 |          8 |    93 | Monthly   |
+|  6 |          1 |    90 | Final     |
+|  7 |          5 |    70 | Final     |
+|  8 |          8 |    79 | Final     |
++----+------------+-------+-----------+
+8 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> create view view_student_results as
+    -> select r.student_id, s.full_name, r.score as marks, r.exam_type
+    -> from students as s, results r
+    -> where r.student_id=s.id;
+Query OK, 0 rows affected (0.426 sec)
+
+MariaDB [ahms_db]> show tables;
++----------------------+
+| Tables_in_ahms_db    |
++----------------------+
+| results              |
+| students             |
+| users                |
+| view_student_results |
++----------------------+
+4 rows in set (0.001 sec)
+
+MariaDB [ahms_db]> desc view_student_results;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| student_id | int(11)      | YES  |     | NULL    |       |
+| full_name  | varchar(20)  | YES  |     | NULL    |       |
+| marks      | float        | YES  |     | NULL    |       |
+| exam_type  | varchar(100) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+4 rows in set (0.026 sec)
+
+MariaDB [ahms_db]> select * from view_student_results;
++------------+-----------+-------+-----------+
+| student_id | full_name | marks | exam_type |
++------------+-----------+-------+-----------+
+|          1 | Mina      |    50 | Final26   |
+|          2 | Mithu     |    20 | Monthly   |
+|          5 | Raju      |    39 | Monthly   |
+|          7 | Eimrul    |    59 | Monthly   |
+|          8 | Tasnim    |    93 | Monthly   |
+|          1 | Mina      |    90 | Final     |
+|          5 | Raju      |    70 | Final     |
+|          8 | Tasnim    |    79 | Final     |
++------------+-----------+-------+-----------+
+8 rows in set (0.001 sec)
+
+MariaDB [ahms_db]> select full_name,marks from view_student_results where marks < 40;
++-----------+-------+
+| full_name | marks |
++-----------+-------+
+| Mithu     |    20 |
+| Raju      |    39 |
++-----------+-------+
+2 rows in set (0.001 sec)
+
+MariaDB [ahms_db]> select marks from results where student_id=1;
+ERROR 1054 (42S22): Unknown column 'marks' in 'field list'
+MariaDB [ahms_db]> select score from results where student_id=1;
++-------+
+| score |
++-------+
+|    50 |
+|    90 |
++-------+
+2 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(2, 20, "Mid-1");
+Query OK, 1 row affected (0.033 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(5, 39, "Mid-1");
+Query OK, 1 row affected (0.083 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(7, 28, "Mid-1");
+Query OK, 1 row affected (0.029 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(8, 93, "Mid-1");
+Query OK, 1 row affected (0.020 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(1, 33, "Mid-1");
+Query OK, 1 row affected (0.028 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(2, 20, "Mid-2");
+Query OK, 1 row affected (0.019 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(5, 39, "Mid-2");
+Query OK, 1 row affected (0.028 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(7, 59, "Mid-2");
+Query OK, 1 row affected (0.019 sec)
+
+MariaDB [ahms_db]> insert into results(student_id, score, exam_type)
+    -> values(7, 65, "Final");
+Query OK, 1 row affected (0.028 sec)
+
+MariaDB [ahms_db]> select * from results;
++----+------------+-------+-----------+
+| id | student_id | score | exam_type |
++----+------------+-------+-----------+
+|  1 |          1 |    50 | Final26   |
+|  2 |          2 |    20 | Monthly   |
+|  3 |          5 |    39 | Monthly   |
+|  4 |          7 |    59 | Monthly   |
+|  5 |          8 |    93 | Monthly   |
+|  6 |          1 |    90 | Final     |
+|  7 |          5 |    70 | Final     |
+|  8 |          8 |    79 | Final     |
+|  9 |          2 |    20 | Mid-1     |
+| 10 |          5 |    39 | Mid-1     |
+| 11 |          7 |    28 | Mid-1     |
+| 12 |          8 |    93 | Mid-1     |
+| 13 |          1 |    33 | Mid-1     |
+| 14 |          2 |    20 | Mid-2     |
+| 15 |          5 |    39 | Mid-2     |
+| 16 |          7 |    59 | Mid-2     |
+| 17 |          7 |    65 | Final     |
++----+------------+-------+-----------+
+17 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select student_id, score from results where exam_type="Mid-1" and score < 40;
++------------+-------+
+| student_id | score |
++------------+-------+
+|          2 |    20 |
+|          5 |    39 |
+|          7 |    28 |
+|          1 |    33 |
++------------+-------+
+4 rows in set (0.000 sec)
+
+MariaDB [ahms_db]> select student_id, score from results where exam_type="Mid-2" and score > 40;
++------------+-------+
+| student_id | score |
++------------+-------+
+|          7 |    59 |
++------------+-------+
+1 row in set (0.001 sec)
+
+MariaDB [ahms_db]>
