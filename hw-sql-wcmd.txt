@@ -1,0 +1,194 @@
+create table if not exists brands(
+     id int unsigned primary key auto_increment,
+     name varchar(100)
+     );
+
+create table if not exists categories(
+     id int unsigned primary key auto_increment,
+     name varchar(100)
+     );
+
+create table if not exists products(
+     id int unsigned primary key auto_increment,
+     product_name varchar(100),
+     brand_id int(10),
+     category_id int,
+     price float,
+     is_inactive tinyint default 0
+     );
+insert into brands(name)
+values("Samsung");
+insert into brands(name)
+values("LG");
+insert into brands(name)
+values("Apple");
+
+insert into categories(name)
+values("Smart Phones");
+insert into categories(name)
+values("Laptops");
+insert into categories(name)
+values("Smart Watches");
+
+insert into products(product_name,brand_id,category_id,price,is_active)
+values("iPhone 17");
+insert into products(name)
+values("");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.8457]
+(c) Microsoft Corporation. All rights reserved.
+
+G:\Arif-WDPF-70\xampp\mysql\bin> mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 9
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database home_tasks;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> use home_tasks;
+Database changed
+MariaDB [home_tasks]> show tables;
+Empty set (0.001 sec)
+
+MariaDB [home_tasks]> create table brands;
+ERROR 1113 (42000): A table must have at least 1 column
+MariaDB [home_tasks]> create table if not exists brands(
+    ->      id int unsigned primary key auto_increment,
+    ->      name varchar(100)
+    ->      );
+Query OK, 0 rows affected (0.137 sec)
+
+MariaDB [home_tasks]> create table if not exists categories(
+    ->      id int unsigned primary key auto_increment,
+    ->      name varchar(100)
+    ->      );
+Query OK, 0 rows affected (0.148 sec)
+
+MariaDB [home_tasks]> create table if not exists products(
+    ->      id int unsigned primary key auto_increment,
+    ->      product_name varchar(100),
+    ->      brand_id int(10),
+    ->      category_id int,
+    ->      price float,
+    ->      is_inactive tinyint default 0
+    ->      );
+Query OK, 0 rows affected (0.513 sec)
+
+MariaDB [home_tasks]> show tables;
++----------------------+
+| Tables_in_home_tasks |
++----------------------+
+| brands               |
+| categories           |
+| products             |
++----------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [home_tasks]> insert into brands(name)
+    -> values(Samsung);
+ERROR 1054 (42S22): Unknown column 'Samsung' in 'field list'
+MariaDB [home_tasks]> insert into brands(name)
+    -> values(LG);
+ERROR 1054 (42S22): Unknown column 'LG' in 'field list'
+MariaDB [home_tasks]> insert into brands(name)
+    ->
+    -> insert into brands(name)
+    -> values("Samsung");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'insert into brands(name)
+values("Samsung")' at line 3
+MariaDB [home_tasks]> insert into brands(name)
+    -> values("LG");
+Query OK, 1 row affected (0.038 sec)
+
+MariaDB [home_tasks]> insert into brands(name)
+    -> values("Apple");
+Query OK, 1 row affected (0.027 sec)
+
+MariaDB [home_tasks]> desc brands
+    -> ;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(100)     | YES  |     | NULL    |                |
++-------+------------------+------+-----+---------+----------------+
+2 rows in set (0.034 sec)
+
+MariaDB [home_tasks]> select * from brands;
++----+-------+
+| id | name  |
++----+-------+
+|  1 | LG    |
+|  2 | Apple |
++----+-------+
+2 rows in set (0.000 sec)
+
+MariaDB [home_tasks]> insert into brands(name)
+    -> values("Samsung");
+Query OK, 1 row affected (0.039 sec)
+
+MariaDB [home_tasks]> select * from brands;
++----+---------+
+| id | name    |
++----+---------+
+|  1 | LG      |
+|  2 | Apple   |
+|  3 | Samsung |
++----+---------+
+3 rows in set (0.000 sec)
+
+MariaDB [home_tasks]> insert into categories(name)
+    -> values("Smart Phones");
+Query OK, 1 row affected (0.031 sec)
+
+MariaDB [home_tasks]> insert into categories(name)
+    -> values("Laptops");
+Query OK, 1 row affected (0.043 sec)
+
+MariaDB [home_tasks]> insert into categories(name)
+    -> values("Smart Watches");
+Query OK, 1 row affected (0.041 sec)
+
+MariaDB [home_tasks]> select * from categories;
++----+---------------+
+| id | name          |
++----+---------------+
+|  1 | Smart Phones  |
+|  2 | Laptops       |
+|  3 | Smart Watches |
++----+---------------+
+3 rows in set (0.000 sec)
+
+MariaDB [home_tasks]>
