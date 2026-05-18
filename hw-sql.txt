@@ -1,0 +1,36 @@
+create table if not exists brands(
+     id int unsigned primary key auto_increment,
+     name varchar(100)
+     );
+
+create table if not exists categories(
+     id int unsigned primary key auto_increment,
+     name varchar(100)
+     );
+
+create table if not exists products(
+     id int unsigned primary key auto_increment,
+     product_name varchar(100),
+     brand_id int(10),
+     category_id int,
+     price float,
+     is_inactive tinyint default 0
+     );
+insert into brands(name)
+values("Samsung");
+insert into brands(name)
+values("LG");
+insert into brands(name)
+values("Apple");
+
+insert into categories(name)
+values("Smart Phones");
+insert into categories(name)
+values("Laptops");
+insert into categories(name)
+values("Smart Watches");
+
+insert into products(product_name,brand_id,category_id,price,is_active)
+values("iPhone 17");
+insert into products(name)
+values("");
